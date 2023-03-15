@@ -5,6 +5,9 @@ body {
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	font-size: 1.5rem;
 }
+.section{
+	cursor: pointer;
+}
 .icon_plus {
     width: 1em;
     height: 1em;
@@ -16,10 +19,10 @@ body {
 	width: 50%;
 	margin: 1.5rem auto;
 	padding: 0 0 1rem 0;
+	cursor: pointer;
 	background-color: #f5f5eb;
-	cursor: alias;
-	border-radius: 25px;
-    border: 1px solid #000000;
+	border-radius: 1.5rem;
+    border: 0.1vh solid #000000;
 }
 .section_toggle {
 	display: none;
@@ -120,6 +123,20 @@ body {
 	}
 	.img_mem {
 		width: 40%;
+	}
+}
+@media screen and (max-width: 1080px) {
+    .heading {
+		font-size: 1.8rem;
+	}
+	.box {
+		margin: 0 1.5rem;
+	}
+	.card .section {
+		font-size: 1rem;
+	}
+	.img_mem {
+		width: 50%;
 	}
 }
 @media screen and (max-width: 568px) {
