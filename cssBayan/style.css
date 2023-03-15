@@ -1,0 +1,156 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 1.5rem;
+}
+.section{
+	cursor: pointer;
+}
+.icon_plus {
+    width: 1em;
+    height: 1em;
+}
+.img_mem {
+	width: 30%;
+}
+.container {
+	width: 50%;
+	margin: 1.5rem auto;
+	padding: 0 0 1rem 0;
+	cursor: pointer;
+	background-color: #f5f5eb;
+	border-radius: 1.5rem;
+    border: 0.1vh solid #000000;
+}
+.section_toggle {
+	display: none;
+}
+.heading {
+	display: flex;
+	justify-content: center;
+	font-size: 2.3rem;
+	font-weight: 700;
+}
+.bayan_title {
+	margin: 0.5rem 0 0 0
+}
+.line{
+    border: 0.05rem solid gray;
+    width: 85%;
+    margin: 0.2rem auto;
+}
+.box {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 5rem;
+}
+.image_center {
+	display: flex;
+	justify-content: center;
+}
+.box img {
+	opacity: 0;
+	transition: all 0.5s ease;
+}
+.img_mem {
+	height: 0;
+	text-align: center;
+	transition: all 0.8s ease 0s;
+}
+.box .title {
+	color: blue;
+	transition: all 0.3s ease 0s;
+	padding: 0.5rem 0;
+}
+.section_toggle:checked~.section .img_mem {
+	height: auto;
+	margin: 2rem;
+	transition: .6s;
+}
+.section_toggle:checked~.section>.box img {
+	transform: rotate(45deg);
+	transition: .6s;
+}
+.section_toggle:checked~.section>.box .title {
+	color: #000000;
+}
+.card {
+	color: #000
+}
+@media(hover:hover) {
+	.container:hover .card .section .box img {
+		opacity: 1;
+		transition: all 1s ease;
+	}
+	.container:hover .section .box .title {
+		color: #000;
+		transition: all 1s ease;
+	}
+	.section:hover .img_mem {
+		height: auto;
+		margin: 2rem;
+	}
+	.section:hover .box img {
+		transform: rotate(45deg);
+		transition: .6s;
+	}
+	.card:hover .box img {
+		transform: rotate(45deg);
+		transition: .6s;
+	}
+	.card:hover .img_mem {
+		height: auto;
+		margin: 2rem;
+	}
+}
+.card:active .section .box .title {
+	color: blue;
+}
+.card:active .img_mem {
+	opacity: 0.3;
+}
+@media screen and (max-width: 1180px) {
+    .heading {
+		font-size: 2rem;
+	}
+	.box {
+		margin: 0 2rem;
+	}
+	.card .section {
+		font-size: 1.2rem;
+	}
+	.img_mem {
+		width: 40%;
+	}
+}
+@media screen and (max-width: 1080px) {
+    .heading {
+		font-size: 1.8rem;
+	}
+	.box {
+		margin: 0 1.5rem;
+	}
+	.card .section {
+		font-size: 1rem;
+	}
+	.img_mem {
+		width: 50%;
+	}
+}
+@media screen and (max-width: 568px) {
+    .heading {
+		font-size: 1.5rem;
+	}
+	.box {
+		margin: 0 1rem;
+	}
+	.card .section {
+		font-size: 0.8rem;
+	}
+	.img_mem {
+		width: 60%;
+	}
+}
+
